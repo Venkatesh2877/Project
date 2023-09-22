@@ -5,7 +5,7 @@ metadata:
   labels:
     app: backend
   name: backend
-  namespace: kiran
+  namespace: venky
 spec:
   replicas: 2
   selector:
@@ -18,7 +18,7 @@ spec:
         app: backend
     spec:
       containers:
-      - image: kiran023/backend
+      - image: venky023/backend
         name: backend
         ports:
         - containerPort: 8086
@@ -32,7 +32,7 @@ metadata:
   labels:
     app: frontend
   name: frontend
-  namespace: kiran
+  namespace: venky
 spec:
   replicas: 2
   selector:
@@ -46,7 +46,7 @@ spec:
         app: frontend
     spec:
       containers:
-      - image: kiran023/frontend
+      - image: venky023/frontend
         name: frontend
         ports:
         - containerPort: 8085
@@ -62,7 +62,7 @@ metadata:
   labels:
     app: backend
   name: backend
-  namespace: kiran
+  namespace: venky
 spec:
   ipFamilies:
   - IPv4
@@ -85,7 +85,7 @@ metadata:
   labels:
     app: frontend
   name: frontend
-  namespace: kiran 
+  namespace: venky 
 spec: 
   ports:
   - name: 8085-8085
