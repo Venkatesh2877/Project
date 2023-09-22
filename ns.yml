@@ -3,8 +3,8 @@ kind: Namespace
 metadata:
   creationTimestamp: "2023-09-11T17:51:15Z"
   labels:
-    kubernetes.io/metadata.name: kiran
-  name: kiran
+    kubernetes.io/metadata.name: venky
+  name: venky
   resourceVersion: "6040"
   uid: 58e13662-8dc2-4e49-93aa-7ddedaea1d9b
 spec:
