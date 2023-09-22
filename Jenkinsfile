@@ -5,8 +5,8 @@ pipeline{
         
     }
     environment{
-        imageNameBackend = "kiran023/backend"
-        imageNameFrontend = "kiran023/frontend"
+        imageNameBackend = "venky023/backend"
+        imageNameFrontend = "venky023/frontend"
         registryUrl = "registry.hub.docker.com"
         registryCreds = 'docker'
         dockerImageBackend = ''
@@ -27,7 +27,7 @@ pipeline{
         }
         stage("sonarqube build"){
             steps{
-                withSonarQubeEnv('kiransonarqube') {
+                withSonarQubeEnv('venkysonarqube') {
                     sh "mvn clean package sonar:sonar"
                 }
             }
@@ -35,7 +35,7 @@ pipeline{
         stage("jfrog upload"){
             steps{
                 rtUpload(
-                    serverId: 'kiranjfrog',
+                    serverId: 'venkyjfrog',
                     spec: '''{
                         "files": [
                             {
